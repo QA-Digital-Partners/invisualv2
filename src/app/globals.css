@@ -1,0 +1,582 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1D1D1D;
+  --foreground: #1D1D1D;
+  overflow-x: hidden !important;
+}
+
+html, body {
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-red-invisual: oklch(0.5726 0.2194 27.41);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1D1D1D;
+    --foreground: #1D1D1D;
+  }
+}
+
+@font-face {
+  font-family: 'TofinoPro';
+  src: url('/fonts/TofinoProPersonal-Black.eot');
+  src: url('/fonts/TofinoProPersonal-Black.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/TofinoProPersonal-Black.woff2') format('woff2'),
+       url('/fonts/TofinoProPersonal-Black.woff') format('woff'),
+       url('/fonts/TofinoProPersonal-Black.ttf') format('truetype'),
+       url('/fonts/TofinoProPersonal-Black.svg#TofinoProPersonal-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TofinoProWideItalic';
+  src: url('/fonts/TofinoProPersonalWide-BlackItalic.eot');
+  src: url('/fonts/TofinoProPersonalWide-BlackItalic.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/TofinoProPersonalWide-BlackItalic.woff2') format('woff2'),
+       url('/fonts/TofinoProPersonalWide-BlackItalic.woff') format('woff'),
+       url('/fonts/TofinoProPersonalWide-BlackItalic.ttf') format('truetype'),
+       url('/fonts/TofinoProPersonalWide-BlackItalic.svg#TofinoProPersonalWide-BlackItalic') format('svg');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TofinoProWide';
+  src: url('/fonts/TofinoProPersonalWide-BlackItalic.eot');
+  src: url('/fonts/TofinoProPersonalWide-BlackItalic.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/TofinoProPersonalWide-BlackItalic.woff2') format('woff2'),
+       url('/fonts/TofinoProPersonalWide-BlackItalic.woff') format('woff'),
+       url('/fonts/TofinoProPersonalWide-BlackItalic.ttf') format('truetype'),
+       url('/fonts/TofinoProPersonalWide-BlackItalic.svg#TofinoProPersonalWide-BlackItalic') format('svg');
+  font-weight: 900;
+}
+
+
+@font-face {
+  font-family: 'TofinoPro';
+  src: url('/fonts/TofinoProPersonal-BlackItalic.eot');
+  src: url('/fonts/TofinoProPersonal-BlackItalic.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/TofinoProPersonal-BlackItalic.woff2') format('woff2'),
+       url('/fonts/TofinoProPersonal-BlackItalic.woff') format('woff'),
+       url('/fonts/TofinoProPersonal-BlackItalic.ttf') format('truetype'),
+       url('/fonts/TofinoProPersonal-BlackItalic.svg#TofinoProPersonal-BlackItalic') format('svg');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TofinoPro';
+  src: url('/fonts/TofinoProPersonal-Bold.eot');
+  src: url('/fonts/TofinoProPersonal-Bold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/TofinoProPersonal-Bold.woff2') format('woff2'),
+       url('/fonts/TofinoProPersonal-Bold.woff') format('woff'),
+       url('/fonts/TofinoProPersonal-Bold.ttf') format('truetype'),
+       url('/fonts/TofinoProPersonal-Bold.svg#TofinoProPersonal-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TofinoPro';
+  src: url('/fonts/TofinoProPersonal-Regular.eot');
+  src: url('/fonts/TofinoProPersonal-Regular.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/TofinoProPersonal-Regular.woff2') format('woff2'),
+       url('/fonts/TofinoProPersonal-Regular.woff') format('woff'),
+       url('/fonts/TofinoProPersonal-Regular.ttf') format('truetype'),
+       url('/fonts/TofinoProPersonal-Regular.svg#TofinoProPersonal-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+
+body {
+  background: var(--background);
+  color: #ffffff;
+  font-family: 'TofinoPro', sans-serif;
+}
+
+.tofinowide {
+  font-family: 'TofinoProWide', sans-serif;
+}
+@keyframes diagonalMove {
+  0% {
+    transform: translate(-200px,0);
+  }
+  50% {
+    transform: translate(200px, 0px); /* Ajusta para que el ángulo simule 164° */
+  }
+/*  50% {
+    transform: translate(-350px, 0px); /* Ajusta para que el ángulo simule 164° */
+/*  }
+  75% {
+    transform: translate(200px, 0);
+  }*/
+  100% {
+    transform: translate(0px, 0);
+  }
+}
+
+.animate-diagonal {
+  animation: diagonalMove 1.5s ease-in-out;
+}
+
+.services {
+  background-image: url('/images/Our-Services.png');
+  background-position: center;
+  background-size:cover;
+
+}
+
+.degradado {
+  background: linear-gradient(180deg, rgba(255, 0, 0, 0.00) 13.66%, #F00 146.79%);
+}
+
+.degradado-inverse {
+   background: linear-gradient(-3deg, rgba(0, 0, 0, 0.00) 54%, #F00 125%);
+}
+
+@keyframes floatY {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.float-up-down {
+  animation: floatY 4s ease-in-out infinite;
+}
+
+.text-stroke {
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+-webkit-text-stroke-color: #FFF;
+}
+
+.bg-degradado {
+  background-image: url('/images/bg-services-content.png');
+  background-position: bottom center;
+  background-size:cover;
+}
+
+/* Tamaño base de todos los slides */
+.swiper-slide-content {
+  width: 664px;   /* tamaño normal */
+  transition: all 0.3s ease;
+}
+
+/* Slide central (activo) */
+.swiper-slide-active .swiper-slide-content {
+  width: 664px;
+}
+
+.satisfaction {
+  background-image: url('/images/customers-satisfaction-bg.webp');
+  background-position: top right;
+  background-size:cover;
+}
+
+.bg-image {
+  background-image: url('/images/Commercial-wrap-home-image.webp');
+  background-position: top right;
+  background-size:cover;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(90px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.sidebar-blog {
+  fill: rgba(255, 255, 255, 0.10);
+  box-shadow: 92.134px -92.134px 92.134px 0px rgba(194, 194, 194, 0.10) inset, -92.134px 92.134px 92.134px 0px rgba(255, 255, 255, 0.10) inset;
+  backdrop-filter: blur(92.13448333740234px);
+}
+
+/************ Home - Why ***********/
+#why.home{
+  background-image: url('/images/bg-Why-Choose-Us.webp');
+  background-position: top center;
+  background-size:cover;
+}  
+
+/******************************************** Classes for indivual Post ************************************/
+
+.postInnerText h2 {
+  line-height: 55px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.postInnerText img {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.postInnerText h3 {
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.postInnerText {
+  line-height: 22px;
+}
+
+.postInnerText ul {
+  list-style: circle;
+  padding-left: 20px;
+}
+
+.postInnerText li {
+  padding-bottom: 10px;
+}
+
+.postInnerText iframe {
+  justify-self: center;
+  margin-bottom: 3rem;
+}
+
+.postInnerText p {
+  line-height: 26px;
+}
+
+
+
+/********************************************* Classes Home *********************************************************/
+
+#benefits.home{
+  background-image: url('/images/beneficts-commercial-wraps.webp');
+  background-position: top center;
+  background-size:cover;
+}
+
+.benefit-slider-bg {
+  background-image: url('/images/truck-slide-benefits-bg.svg');
+  background-position: center;
+  background-size:cover;
+}
+
+#graphic.home{
+  background-image: url('/images/graphic-design-bg.svg');
+  background-position: top center;
+  background-size:cover;
+}  
+
+#cta.home{
+  background-image: url('/images/CTA-contact-bg.webp');
+  background-position: bottom center;
+  background-size:cover;
+}
+
+.text-effect {
+  background-color: #ffffff;
+  color: transparent;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 1), 2px 2px 2px rgba(0, 0, 0, 1), 0px 0px 0px rgba(67, 66,66,0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
+#types.home {
+  background-image: url('/images/types-of-vehicle-wrap.webp');
+  background-position: bottom center;
+  background-size:cover;
+}
+
+#types2.home {
+  background-image: url('/images/vehicles-that-can-be-wrapped.webp');
+  background-position: top center;
+  background-size:cover;
+}
+
+
+/***************** CLases Footer ********************************/
+.degradadoline {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 2.12%, #FFF 17.63%, #FFF 77.67%, rgba(255, 255, 255, 0.00) 100.61%);
+}
+
+/************************************************************ Clases About *****************************************/
+
+.about-banner {
+  background-image: url('/images/banner-bg-about.webp');
+  background-position: top center;
+  background-size:cover;
+}
+
+.our-mission {
+  background-image: url('/images/mission-bg.webp');
+  background-position: right top;
+  background-size:cover;
+}
+
+.our-vission {
+  background-image: url('/images/vision-bg.png');
+  background-position: right center;
+  background-size:cover;
+}
+
+.passion-v {
+  background-image: url('/images/passion-bg.webp');
+  background-position: center;
+  background-size:cover;
+}
+
+.experience-v {
+  background-image: url('/images/experience-bg.webp');
+  background-position: center;
+  background-size:cover;
+}
+
+.resp-v {
+  background-image: url('/images/resp-bg.webp');
+  background-position: center;
+  background-size:cover;
+}
+
+.collab-v {
+  background-image: url('/images/collab-bg.webp');
+  background-position: center;
+  background-size:cover;
+}
+
+.creative-v {
+  background-image: url('/images/creative-bg.webp');
+  background-position: center;
+  background-size:cover;
+}
+
+@keyframes face-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+    transform-origin: left center;
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(6px);
+    transform-origin: left center;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    transform-origin: left center;
+  }
+}
+
+
+
+/* Clase personalizada */
+.face-in-left {
+  @apply animate-[face-in-left_2.65s_ease-in-out_both];
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.face-in-left-delay-500 {
+  @apply animate-[face-in-left_2.65s_ease-in-out_both];
+  animation-delay: 0.5s;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+/* Respeto a usuarios con reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .face-in-left {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width:767px) {
+.about-banner {
+  background-image: url('/images/banner-bg-about-resp.webp');
+  background-position: bottom center;
+}
+
+.our-mission {
+  background-image: url('/images/mission-bg-resp.webp');
+  background-position: center top;
+}
+
+  
+}
+
+
+/********************************************************** Clases Vehicle Wrapping */
+
+.vehicle-customer-satisfaction {
+  background-image: url('/images/banner-bg-about.webp');
+  background-position: top center;
+  background-size:cover;
+}
+
+.process-bg-modifier {
+  clip-path: polygon(
+    77px 0,
+    100% 0,
+    calc(100% - 77px) 100%,
+    0 100%
+  );
+}
+
+.step-bg {
+  background: linear-gradient(23deg, rgba(255, 0, 0, 0.00) -37.91%, #F00 37.07%);
+  opacity: 0.7;
+  mix-blend-mode: plus-darker;
+}
+
+.step-1-bg {
+  background-image: url('/images/consultation-and-quote-bg.webp');
+}
+
+
+.step-2-bg {
+  background-image: url('/images/design-and-pproval-bg.webp');
+}
+
+.step-3-bg {
+  background-image: url('/images/installation-and-delivery-bg.webp');
+}
+
+.step-1-bg, .step-2-bg, .step-3-bg {
+  background-position: center;
+  background-size:cover;
+}
+
+
+.degradado-left {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+/*    background: linear-gradient(to right, #1d1d1d 0%, transparent 50%, #1d1d1d 100%);*/
+    background: #1d1d1d;
+    animation: mover 1s ease-out forwards;
+}
+
+  @keyframes mover {
+    0% {
+      transform: translateX(0);
+      height: 75%;
+    }
+    20% {
+      height: 50%;
+    }
+    100% {
+      transform: translateX(-100%);
+      height: 20%;
+      display: none; /* no visible al final */
+    }
+  }
+
+
+.cta-servicepage {
+  background-image: url('/images/cta-service-page.webp');
+  background-position: center right;
+  background-size:cover;
+}
+
+.results-services {
+  background-image: url('/images/vehicle-wrapping-services/CTA-results.webp');
+  background-position: center top;
+  background-size:cover;
+}
+
+
+/*************************************/
+
+.contenedor-rueda {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rueda {
+  width: 100%;
+  height: 100%;
+  transform: rotate(0deg); /* Asegúrate de rotar el SVG */
+  transition: transform 1s ease;
+}
+
+.boton {
+  margin-top: 40px;
+  padding: 10px 20px;
+  border: none;
+  background: #007aff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.boton:hover {
+  background: #005bcc;
+}
+
+.titulo-texto {
+  font-size: 35px;
+  fill: #fff; /* Color del texto (puedes cambiarlo aquí) */
+  transition: transform 1s ease; /* Suaviza el movimiento */
+}
+
+
+
+.swiper-pagination {
+  position: relative !important;
+  bottom: 0 !important;
+  margin-top: 24px;
+}
+.swiper-pagination-bullet {
+  background: #fff !important;
+  opacity: 1 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+.swiper-pagination-bullet-active {
+  background: #D92630 !important;
+}

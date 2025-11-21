@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Tofino';
+    src: url('TofinoProPersonal-Regular.eot');
+    src: url('TofinoProPersonal-Regular.eot?#iefix') format('embedded-opentype'),
+        url('TofinoProPersonal-Regular.woff2') format('woff2'),
+        url('TofinoProPersonal-Regular.woff') format('woff'),
+        url('TofinoProPersonal-Regular.ttf') format('truetype'),
+        url('TofinoProPersonal-Regular.svg#TofinoProPersonal-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tofino Pro Personal';
+    src: url('TofinoProPersonal-Black.eot');
+    src: url('TofinoProPersonal-Black.eot?#iefix') format('embedded-opentype'),
+        url('TofinoProPersonal-Black.woff2') format('woff2'),
+        url('TofinoProPersonal-Black.woff') format('woff'),
+        url('TofinoProPersonal-Black.ttf') format('truetype'),
+        url('TofinoProPersonal-Black.svg#TofinoProPersonal-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tofino';
+    src: url('TofinoProPersonal-Bold.eot');
+    src: url('TofinoProPersonal-Bold.eot?#iefix') format('embedded-opentype'),
+        url('TofinoProPersonal-Bold.woff2') format('woff2'),
+        url('TofinoProPersonal-Bold.woff') format('woff'),
+        url('TofinoProPersonal-Bold.ttf') format('truetype'),
+        url('TofinoProPersonal-Bold.svg#TofinoProPersonal-Bold') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tofino Pro Personal Black Ita';
+    src: url('TofinoProPersonal-BlackItalic.eot');
+    src: url('TofinoProPersonal-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('TofinoProPersonal-BlackItalic.woff2') format('woff2'),
+        url('TofinoProPersonal-BlackItalic.woff') format('woff'),
+        url('TofinoProPersonal-BlackItalic.ttf') format('truetype'),
+        url('TofinoProPersonal-BlackItalic.svg#TofinoProPersonal-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
